@@ -1,11 +1,11 @@
 {
   "name": "personal-site",
   "version": "4.0.0",
-  "homepage": "https://mmilkowski36/mmilkowski36.git.io",
+  "homepage": "https://mmilkowski36.git.io",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mmilkowski36/mmilkowski36.git.io.git"
+    "url": "https://github.com/mmilkowski36/mmilkowski36.git.io"
   },
   "engines": {
     "node": ">=16.x"
