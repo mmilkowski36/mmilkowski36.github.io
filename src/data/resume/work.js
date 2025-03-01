@@ -13,10 +13,10 @@
  */
 const work = [
   {
-    name: 'Promptfoo',
-    position: 'Co-founder & CTO',
+    name: 'F5',
+    position: 'Project Manager',
     url: 'https://promptfoo.dev',
-    startDate: '2024-07-01',
+    startDate: '2024-06-01',
     summary: 'Promptfoo builds open-source tools to evaluate, find, and fix vulnerabilities in large language models (LLMs). Our open-source tools are used by over 35,000 developers and researchers worldwide.',
     highlights: [
       'Built and scaled engineering team, emphasizing diversity and open-source contribution',
@@ -129,52 +129,6 @@ const work = [
       'Built models to improve image quality, signal to noise ratio, and dynamic range.',
       'Performed statistical analysis of image quality in Matlab and Python.  Developed flight software in C++.',
       'Organized first hackathon, prototyped hardware, and designed and built photography equipment for rocket launches.',
-    ],
-  },
-  {
-    name: 'Planetary Resources',
-    position: 'Avionics Intern',
-    startDate: '2014-01-01',
-    endDate: '2014-05-01',
-    url: 'http://planetaryresources.com',
-    highlights: [
-      'Developed simulations in Matlab for Attitude Determination and Control Subsystem.',
-      'Developed processes for in lab testing and characterization of various subsystems.',
-      'Assembled flight hardware in cleanroom.',
-    ],
-  },
-  {
-    name: 'Facebook',
-    position: 'Software Engineer Intern',
-    url: 'https://facebook.com',
-    startDate: '2013-06-01',
-    endDate: '2013-09-01',
-    highlights: [
-      'Developed software in python for automated testing of servers.',
-      'Performed statistical analysis with R, HIVE to assist in triage of malfunctioning servers.',
-      "Worked with vendors and ODM's during triage to assist in risk mitigation.",
-    ],
-  },
-  {
-    name: 'SEDS-USA',
-    position: 'At Large Board Member',
-    url: 'http://seds.org',
-    startDate: '2013-10-01',
-    endDate: '2014-10-01',
-    highlights: [
-      "Elected to Board of Directors of the USA's largest student space advocacy group based on 5+ years of work with SEDS.",
-      'Responsibilities included: organizational strategy, conference presentations, fundraising, special projects, promoting SEDS nationally and internationally, and photographing conferences.',
-    ],
-  },
-  {
-    name: 'UB Nanosatellite Program',
-    position: 'Co-founder, Program Manager',
-    url: 'https://ubnl.space/',
-    startDate: '2010-10-01',
-    endDate: '2012-06-01',
-    highlights: [
-      'Coauthored grant to build a multi-spectral imaging satellite as part of the AFRL University Nanosatellite Program.',
-      'Lead a team of 60 students through satellite development life cycle. Served as a technical expert, acquired intimate working knowledge of satellite subsystems.  Solicited funding through NASA, AFOSR, and several corporate sponsors.',
     ],
   },
 ];

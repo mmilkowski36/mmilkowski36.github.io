@@ -12,9 +12,9 @@ const Projects = () => (
       <header>
         <div className="title">
           <h2>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects">News</Link>
           </h2>
-          <p>A selection of projects that I&apos;m not too ashamed of</p>
+          <p>Here is what I have been up to lately!</p>
         </div>
       </header>
       {data.map((project) => (
