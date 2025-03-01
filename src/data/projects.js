@@ -4,7 +4,7 @@ const data = [
     title: 'ND Features my Project',
     subtitle: 'Youth Vaping Poster',
     link: 'https://news.nd.edu/news/lucy-family-institute-health-department-identify-youth-vaping-intervention-strategies-for-st-joseph-county/',
-    image: '/images/projects/harvest.jpg',
+    image: '/images/projects/vapephot.jpg',
     date: '2025-02-19',
     desc:
       'Notre Dame features my project on technological interventions for '
@@ -14,7 +14,7 @@ const data = [
   {
     title: 'ACM GROUP 2025',
     subtitle: 'Youth Vaping Poster',
-    image: '/images/projects/nearestdollar.jpg',
+    image: '/images/projects/vapingposter.jpg',
     date: '2025-01-14',
     desc:
       'Presented Technological Interventions for Youth Vaping Poster at ACM GROUP 2025! ',
