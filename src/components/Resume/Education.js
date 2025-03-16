@@ -22,6 +22,7 @@ Education.propTypes = {
       degree: PropTypes.string,
       link: PropTypes.string,
       year: PropTypes.number,
+      highlights: PropTypes.arrayOf(PropTypes.string),
     }),
   ),
 };

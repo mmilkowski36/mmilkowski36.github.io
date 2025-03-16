@@ -17,8 +17,7 @@ const Index = () => (
             <Link to="/">Welcome!</Link>
           </h2>
           <p>
-            A beautiful, responsive, statically-generated, react application
-            written with modern Javascript.
+            Hi! I&apos;m Maria, computer scince researcher.
           </p>
         </div>
       </header>

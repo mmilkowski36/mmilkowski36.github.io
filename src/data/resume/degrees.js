@@ -4,6 +4,9 @@ const degrees = [
     degree: 'PhD Computer Science and Engineering',
     link: 'https://www.nd.edu/',
     year: 'TBD',
+    highlights: [
+      'Advisor: Tim Weninger',
+    ],
   },
   {
     school: 'Seattle University',
