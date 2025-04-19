@@ -23,7 +23,7 @@ const data = [
   {
     title: 'Attended ISRC',
     subtitle: 'ISRC',
-    image: '/images/projects/spacepotato.jpg',
+    image: '/images/projects/ISRCAward.png',
     date: '2024-10-10',
     desc:
       'Attended the International School of Responsible Computing in Guatelejara, Mexico. '

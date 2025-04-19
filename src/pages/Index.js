@@ -17,7 +17,7 @@ const Index = () => (
             <Link to="/">Welcome!</Link>
           </h2>
           <p>
-            Hi! I&apos;m Maria, computer scince researcher.
+            Hi! I&apos;m Maria, PhD student in Computer Science and Engineering.
           </p>
         </div>
       </header>
