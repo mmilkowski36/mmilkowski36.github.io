@@ -1,16 +1,16 @@
 [
   {
-    "title": "Title111",
-    "link": "https://example.com/paper1",
-    "authors": ["Maria Milkowski", "Author B", "Author C"],
-    "venue": "Journal of Important Studies",
-    "year": 2023
+    "title": "A Little Bit Goes a Long Way: Modeling Universal Basic Income for Noncooperative Artificial Agents",
+    "link": "https://ieeexplore.ieee.org/abstract/document/11098214/",
+    "authors": ["Maria Milkowski", "Ankur Gupta", "Nathaniel Kremer-Herman"],
+    "venue": "IEEE International Symposium on Ethics in Engineering, Science, and Technology (ETHICS)",
+    "year": 2025
   },
   {
-    "title": "Another Interesting Publication Title",
-    "link": "https://example.com/paper2",
-    "authors": ["Author A", "Juliana Silva", "Author C"],
-    "venue": "Conference on Cool Research",
-    "year": 2022
+    "title": "Youth Vaping in the Digital Age: A Systematic Review of Technological Interventions for Prevention and Cessation",
+    "link": "https://dl.acm.org/doi/abs/10.1145/3688828.3699642",
+    "authors": ["Maria Milkowski", "Johanna Olesk", "Dominique Martel Asfura", "Cassandra Barco", "Cesar Cervera", "Mary Wachira", "Matthew Sisk", "Alissa Balke", "Diana Purushotham", "Renata Williams", "Karla Badillo-Urquiola"],
+    "venue": "ACM International Conference on Supporting Group Work",
+    "year": 2025
   }
 ]
