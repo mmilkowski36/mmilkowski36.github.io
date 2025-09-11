@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Title",
+    "link": "https://example.com/paper1",
+    "authors": ["Juliana Silva", "Author B", "Author C"],
+    "venue": "Journal of Important Studies",
+    "year": 2023
+  },
+  {
+    "title": "Another Interesting Publication Title",
+    "link": "https://example.com/paper2",
+    "authors": ["Author A", "Juliana Silva", "Author C"],
+    "venue": "Conference on Cool Research",
+    "year": 2022
+  }
+]

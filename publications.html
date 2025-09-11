@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications – Maria Milkowski</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f2dede;
+      font-family: 'Raleway', sans-serif;
+      color: #a94442;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+    }
+
+    .logo {
+      font-family: 'IM Fell DW Pica', serif;
+      font-size: 2rem;
+      color: #a94442;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #a94442;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #843534;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .publication {
+      margin-bottom: 30px;
+    }
+
+    .publication a {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #a94442;
+      text-decoration: none;
+    }
+
+    .publication a:hover {
+      text-decoration: underline;
+      color: #843534;
+    }
+
+    .details {
+      font-size: 0.95rem;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">Maria Milkowski</a>
+    <nav>
+      <a href="about.html">About me</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="socials.html">Socials</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Publications</h1>
+    <div id="publications-list">
+      <!-- Populated by JavaScript -->
+    </div>
+  </div>
+
+  <script>
+    const PUBLICATIONS_JSON = 'publications.json';
+    const YOUR_NAME = 'Maria Milkowski';
+
+    fetch(PUBLICATIONS_JSON)
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('publications-list');
+
+        data.forEach(pub => {
+          const pubDiv = document.createElement('div');
+          pubDiv.classList.add('publication');
+
+          const titleLink = document.createElement('a');
+          titleLink.href = pub.link;
+          titleLink.textContent = pub.title;
+          titleLink.target = '_blank';
+
+          const authorsFormatted = pub.authors.map(author => {
+            return author === YOUR_NAME
+              ? `<strong>${author}</strong>`
+              : author;
+          }).join(', ');
+
+          const details = document.createElement('div');
+          details.classList.add('details');
+          details.innerHTML = `${authorsFormatted}, <em>${pub.venue}</em>, ${pub.year}`;
+
+          pubDiv.appendChild(titleLink);
+          pubDiv.appendChild(details);
+          container.appendChild(pubDiv);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading publications:', error);
+      });
+  </script>
+
+</body>
+</html>
