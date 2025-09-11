@@ -99,7 +99,7 @@
       <a href="about.html">About me</a>
       <a href="publications.html">Publications</a>
       <a href="cv.html">CV</a>
-      <a href="socials.html">Socials</a>
+      <a href="404.html">Socials</a>
     </nav>
   </header>
 
@@ -115,38 +115,39 @@
     const YOUR_NAME = 'Maria Milkowski';
 
     fetch(PUBLICATIONS_JSON)
-      .then(response => response.json())
-      .then(data => {
+        .then(response => response.json())
+        .then(data => {
         const container = document.getElementById('publications-list');
 
         data.forEach(pub => {
-          const pubDiv = document.createElement('div');
-          pubDiv.classList.add('publication');
+            const pubDiv = document.createElement('div');
+            pubDiv.classList.add('publication');
 
-          const titleLink = document.createElement('a');
-          titleLink.href = pub.link;
-          titleLink.textContent = pub.title;
-          titleLink.target = '_blank';
+            const titleLink = document.createElement('a');
+            titleLink.href = pub.link;
+            titleLink.innerHTML = pub.title;  // Using innerHTML now
+            // ⛔ Removed: target="_blank"
 
-          const authorsFormatted = pub.authors.map(author => {
+            const authorsFormatted = pub.authors.map(author => {
             return author === YOUR_NAME
-              ? `<strong>${author}</strong>`
-              : author;
-          }).join(', ');
+                ? `<strong>${author}</strong>`
+                : author;
+            }).join(', ');
 
-          const details = document.createElement('div');
-          details.classList.add('details');
-          details.innerHTML = `${authorsFormatted}, <em>${pub.venue}</em>, ${pub.year}`;
+            const details = document.createElement('div');
+            details.classList.add('details');
+            details.innerHTML = `${authorsFormatted}, <em>${pub.venue}</em>, ${pub.year}`;
 
-          pubDiv.appendChild(titleLink);
-          pubDiv.appendChild(details);
-          container.appendChild(pubDiv);
+            pubDiv.appendChild(titleLink);
+            pubDiv.appendChild(details);
+            container.appendChild(pubDiv);
         });
-      })
-      .catch(error => {
+        })
+        .catch(error => {
         console.error('Error loading publications:', error);
-      });
-  </script>
+        });
+    </script>
+
 
 </body>
 </html>
