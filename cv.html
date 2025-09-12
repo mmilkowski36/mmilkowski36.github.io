@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page Not Found – Maria Milkowski</title>
+  <title>Curriculum Vitae – Maria Milkowski</title>
   <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
   <style>
     * {
@@ -17,10 +17,8 @@
       font-family: 'Raleway', sans-serif;
       color: #a94442;
       min-height: 100vh;
-      background-image: url("images/splotches.png"); /* Replace with transparent PNG */
-      background-position: right center;
-      background-repeat: no-repeat;
-      background-size: contain;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -44,6 +42,7 @@
       color: #a94442;
       font-weight: 500;
       font-size: 0.95rem;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -51,21 +50,54 @@
       color: #843534;
     }
 
+    /* Active page styling */
+    nav a.active {
+      color: #843534;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
     .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
       text-align: center;
-      margin-top: 10vh;
-      padding: 20px;
     }
 
     .content h1 {
-      font-size: 4rem;
-      font-weight: 500;
+      font-family: 'IM Fell DW Pica', serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
-    .content p {
-      margin-top: 30px;
-      font-size: 1.2rem;
-      letter-spacing: 3px;
+    .cv-frame {
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 8.5 / 11;
+      border: 2px solid #a94442;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .download-link {
+      text-decoration: none;
+      color: #a94442;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .download-link:hover {
+      text-decoration: underline;
+      color: #843534;
     }
 
     @media (max-width: 768px) {
@@ -81,16 +113,7 @@
       }
 
       .content h1 {
-        font-size: 2.5rem;
-      }
-
-      .content p {
-        font-size: 1rem;
-      }
-
-      body {
-        background-size: 80%;
-        background-position: center bottom;
+        font-size: 2rem;
       }
     }
   </style>
@@ -103,15 +126,19 @@
     <nav>
       <a href="about.html">About me</a>
       <a href="publications.html">Publications</a>
-      <a href="cv.html">CV</a>
+      <a href="cv.html" class="active">CV</a>
       <a href="socials.html">Socials</a>
     </nav>
   </header>
 
-  <!-- Main Message -->
+  <!-- CV Content -->
   <div class="content">
-    <h1>Under Construction</h1>
-    <p>COME BACK LATER</p>
+    <h1>Curriculum Vitae</h1>
+    <div class="cv-frame">
+      <!-- Replace with your actual CV file -->
+      <iframe src="cv.pdf"></iframe>
+    </div>
+    <a class="download-link" href="cv.pdf" download>Download CV</a>
   </div>
 
 </body>
