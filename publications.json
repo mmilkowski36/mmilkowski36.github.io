@@ -1,5 +1,19 @@
 [
   {
+    "title": "The Power of Framing: How News Headlines Guide Search Behavior",
+    "link": "https://arxiv.org/abs/2508.17131",
+    "authors": ["Amrit Poudel", "Maria Milkowski", "Tim Weninger"],
+    "venue": "Empirical Methods in Natural Language Processing (EMNLP)",
+    "year": 2025
+  },
+  {
+    "title": "VirtLab: An AI-Powered System for Flexible, Customizable, and Large-scale Team Simulations",
+    "link": "https://arxiv.org/abs/2508.04634",
+    "authors": ["Mohammed Almutairi", "Charles Chiang", "Haoze Guo", "Matthew Belcher", "Nandini Banerjee", "Maria Milkowski", "Svitlana Volkova", "Daniel Nguyen", "Tim Weninger", "Michael Yankoski", "Trenton W. Ford", "Diego Gomez-Zara"],
+    "venue": "ACM Symposium on User Interface Software and Technology (UIST)",
+    "year": 2025
+  },
+  {
     "title": "A Little Bit Goes a Long Way: Modeling Universal Basic Income for Noncooperative Artificial Agents",
     "link": "https://ieeexplore.ieee.org/abstract/document/11098214/",
     "authors": ["Maria Milkowski", "Ankur Gupta", "Nathaniel Kremer-Herman"],
