@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me – Maria Milkowski</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f2dede; /* matches your pink theme */
+      font-family: 'Raleway', sans-serif;
+      color: #a94442;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+    }
+
+    .logo {
+      font-family: 'Raleway', sans-serif;
+      font-size: 2rem;
+      color: #a94442;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #a94442;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #843534;
+    }
+
+    nav a.active {
+      color: #843534;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* Page Layout */
+    .about {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 60px;
+    }
+
+    .about img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 50%;
+      border: 3px solid #a94442;
+      object-fit: cover;
+      justify-self: center;
+    }
+
+    .about-text h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .about img {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">Maria Milkowski</a>
+    <nav>
+      <a href="about.html" class="active">About me</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="socials.html">Socials</a>
+    </nav>
+  </header>
+
+  <!-- About Content -->
+  <section class="about">
+    <img src="images/me.jpg" alt="Maria Milkowski">
+    <div class="about-text">
+      <h1>Hello! I'm Maria</h1>
+      <p>
+        I am currently a graduate student at the University of Notre Dame in the Computer Science and Engineering department. 
+        My research focuses on agentic AI systems.
+      </p>
+      <p>
+        A place.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
