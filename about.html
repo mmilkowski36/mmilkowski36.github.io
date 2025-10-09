@@ -265,12 +265,16 @@
       .data(countries)
       .join("path")
       .attr("d", path)
-      .attr("fill", d => visited[d.properties.name] ? "var(--map-fill)" : "none")
-      .attr("stroke", "var(--map-line)")
+      .attr("fill", d => visited[d.properties.name] ? "rgba(169, 68, 66, 0.25)" : "none")
+      .attr("stroke", "#a94442")
       .attr("stroke-width", 0.6)
+      .style("transition", "fill 0.3s ease")  // smooth animation
       .on("mousemove", function(event, d) {
         const name = d.properties.name;
         if (visited[name]) {
+          d3.select(this)
+            .attr("fill", "#a94442"); // darken on hover
+
           const [x, y] = d3.pointer(event, this.closest(".map-container"));
           tooltip
             .style("opacity", 1)
@@ -279,7 +283,14 @@
             .style("top", `${y - 10}px`);
         }
       })
-      .on("mouseout", () => tooltip.style("opacity", 0));
+      .on("mouseout", function(event, d) {
+        const name = d.properties.name;
+        if (visited[name]) {
+          d3.select(this)
+            .attr("fill", "rgba(169, 68, 66, 0.25)"); // return to light fill
+        }
+        tooltip.style("opacity", 0);
+      });
   });
 
   // Make responsive on resize
