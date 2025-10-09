@@ -101,6 +101,11 @@
       transition: opacity 0.3s;
     }
 
+    :root {
+      --map-line: #a94442;
+      --map-fill: rgba(169, 68, 66, 0.25); /* 25% opacity version of your burgundy */
+    }
+
     /* Page Layout */
     .about {
       flex: 1;
@@ -258,17 +263,18 @@
       .data(countries)
       .join("path")
       .attr("d", path)
-      .attr("fill", d => visited[d.properties.name] ? "#a94442" : "none")
-      .attr("stroke", "#a94442")
+      .attr("fill", d => visited[d.properties.name] ? "var(--map-fill)" : "none")
+      .attr("stroke", "var(--map-line)")
       .attr("stroke-width", 0.6)
       .on("mousemove", function(event, d) {
         const name = d.properties.name;
         if (visited[name]) {
+          const [x, y] = d3.pointer(event, this.closest(".map-container"));
           tooltip
             .style("opacity", 1)
             .html(`<strong>${name}</strong><br/>Visited: ${visited[name]}`)
-            .style("left", event.pageX + 10 + "px")
-            .style("top", event.pageY - 20 + "px");
+            .style("left", `${x + 15}px`)
+            .style("top", `${y - 10}px`);
         }
       })
       .on("mouseout", () => tooltip.style("opacity", 0));
