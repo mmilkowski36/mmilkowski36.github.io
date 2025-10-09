@@ -59,29 +59,34 @@
 
     .map-section {
       text-align: center;
-      padding: 60px 0;
+      padding: 80px 0;
     }
 
     .map-section h2 {
       font-family: 'Raleway', sans-serif;
       font-weight: 500;
       font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       color: #a94442;
     }
 
     .map-container {
+      width: 100%;
       display: flex;
       justify-content: center;
+      align-items: center;
       position: relative;
+      overflow: hidden;
     }
 
     #world-map {
-      max-width: 90%;
+      width: 90%;
       height: auto;
+      max-width: 1000px;
+      background: #f9ecec;
       border: 1px solid #a94442;
       border-radius: 20px;
-      background: #f9ecec;
+      box-shadow: 0 4px 8px rgba(169, 68, 66, 0.15);
     }
 
     .tooltip {
@@ -95,7 +100,6 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
-
 
     /* Page Layout */
     .about {
@@ -214,67 +218,67 @@
 <section class="map-section">
   <h2>Places I've Been</h2>
   <div class="map-container">
-    <svg
-      id="world-map"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 2000 1001"
-    ></svg>
+    <svg id="world-map"></svg>
     <div id="tooltip" class="tooltip"></div>
   </div>
 </section>
 
-<script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
+<script src="https://unpkg.com/d3@7"></script>
 <script src="https://unpkg.com/topojson-client@3"></script>
 <script>
-  // Example country/year data
   const visited = {
-    "United States": "2025",
-    "India": "2023",
+    "United States of America": "2025",
+    "Belize": "2019",
     "Canada": "2024",
     "Mexico": "2024",
-    "Belize": "2019"
+    "India": "2023"
   };
 
-  const width = 900, height = 450;
+  const container = document.querySelector(".map-container");
+  const width = container.offsetWidth * 0.9;
+  const height = width * 0.5;
 
   const svg = d3.select("#world-map")
     .attr("width", width)
-    .attr("height", height);
+    .attr("height", height)
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .attr("preserveAspectRatio", "xMidYMid meet");
 
   const projection = d3.geoNaturalEarth1()
-    .scale(180)
-    .translate([width / 2, height / 2]);
+    .scale(width / 6.3)
+    .translate([width / 2, height / 1.9]);
 
   const path = d3.geoPath().projection(projection);
   const tooltip = d3.select("#tooltip");
 
-  d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
-    .then(worldData => {
-      const countries = topojson.feature(worldData, worldData.objects.countries).features;
+  d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(worldData => {
+    const countries = topojson.feature(worldData, worldData.objects.countries).features;
 
-      svg.selectAll("path")
-        .data(countries)
-        .enter()
-        .append("path")
-        .attr("d", path)
-        .attr("fill", d => {
-          const name = d.properties.name;
-          return visited[name] ? "#a94442" : "none";
-        })
-        .attr("stroke", "#a94442")
-        .attr("stroke-width", 0.5)
-        .on("mousemove", function(event, d) {
-          const name = d.properties.name;
-          if (visited[name]) {
-            tooltip
-              .style("opacity", 1)
-              .html(`<strong>${name}</strong><br/>Visited: ${visited[name]}`)
-              .style("left", event.pageX + 10 + "px")
-              .style("top", event.pageY - 20 + "px");
-          }
-        })
-        .on("mouseout", () => tooltip.style("opacity", 0));
-    });
+    svg.selectAll("path")
+      .data(countries)
+      .join("path")
+      .attr("d", path)
+      .attr("fill", d => visited[d.properties.name] ? "#a94442" : "none")
+      .attr("stroke", "#a94442")
+      .attr("stroke-width", 0.6)
+      .on("mousemove", function(event, d) {
+        const name = d.properties.name;
+        if (visited[name]) {
+          tooltip
+            .style("opacity", 1)
+            .html(`<strong>${name}</strong><br/>Visited: ${visited[name]}`)
+            .style("left", event.pageX + 10 + "px")
+            .style("top", event.pageY - 20 + "px");
+        }
+      })
+      .on("mouseout", () => tooltip.style("opacity", 0));
+  });
+
+  // Make responsive on resize
+  window.addEventListener("resize", () => {
+    const newWidth = container.offsetWidth * 0.9;
+    svg.attr("width", newWidth).attr("height", newWidth * 0.5);
+  });
 </script>
 
 
