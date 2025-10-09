@@ -103,7 +103,7 @@
 
     :root {
       --map-line: #a94442;
-      --map-fill: rgba(169, 68, 66, 0.25); /* 25% opacity version of your burgundy */
+      --map-fill: rgba(169, 68, 66, 0.30); /* 25% opacity version of your burgundy */
     }
 
     /* Page Layout */
@@ -232,11 +232,13 @@
 <script src="https://unpkg.com/topojson-client@3"></script>
 <script>
   const visited = {
-    "United States of America": "2025",
+    "United States of America": "∞",
     "Belize": "2019",
     "Canada": "2024",
     "Mexico": "2024",
-    "India": "2023"
+    "India": "2023",
+    "China": "2025",
+    "South Korea": "2025"
   };
 
   const container = document.querySelector(".map-container");
