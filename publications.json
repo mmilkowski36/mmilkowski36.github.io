@@ -1,5 +1,12 @@
 [
   {
+    "title": "Enabling User-Created Multi-Agent Simulations: Interactive and Customizable 2D Environments to Study Team Dynamics with LLM Agents ",
+    "link": "https://openreview.net/forum?id=BX1BnepTZO",
+    "authors": ["Mohammed Almutairi", "Charles Chiang", "Haoze Guo", "Nandini Banerjee", "Maria Milkowski", "Daniel Nguyen", "Michael G Yankoski", "Tim Weninger", "Svitlana Volkova", "Trenton W. Ford", "Diego Gomez-Zara"],
+    "venue": "Scaling Environments for Agents (SEA) Workshop at NeurIPS",
+    "year": 2025
+  },
+  {
     "title": "The Power of Framing: How News Headlines Guide Search Behavior",
     "link": "https://arxiv.org/abs/2508.17131",
     "authors": ["Amrit Poudel", "Maria Milkowski", "Tim Weninger"],
@@ -11,6 +18,13 @@
     "link": "https://arxiv.org/abs/2508.04634",
     "authors": ["Mohammed Almutairi", "Charles Chiang", "Haoze Guo", "Matthew Belcher", "Nandini Banerjee", "Maria Milkowski", "Svitlana Volkova", "Daniel Nguyen", "Tim Weninger", "Michael Yankoski", "Trenton W. Ford", "Diego Gomez-Zara"],
     "venue": "ACM Symposium on User Interface Software and Technology (UIST)",
+    "year": 2025
+  },
+  {
+    "title": "A Case for Embedding Moral Reasoning in Artificial Agents Engaged in Conflict",
+    "link": "https://ieeexplore.ieee.org/document/11269637",
+    "authors": ["Nathaniel Kremer-Herman", "Maria Milkowski"],
+    "venue": "IEEE International Symposium on Technology and Society (ISTAS)",
     "year": 2025
   },
   {
