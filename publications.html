@@ -89,6 +89,23 @@
       margin-top: 5px;
     }
 
+    .authors {
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    .venue {
+      font-size: 0.85rem;
+      margin-top: 2px;
+      color: #843534;
+      font-style: italic;
+      letter-spacing: 0.02em;
+    }
+
+    .publication {
+      margin-bottom: 36px;
+    }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -149,13 +166,18 @@
                 : author;
             }).join(', ');
 
-            const details = document.createElement('div');
-            details.classList.add('details');
-            details.innerHTML = `${authorsFormatted}, <em>${pub.venue}</em>, ${pub.year}`;
+            const authorsDiv = document.createElement('div');
+            authorsDiv.classList.add('authors');
+            authorsDiv.innerHTML = authorsFormatted;
+
+            const venueDiv = document.createElement('div');
+            venueDiv.classList.add('venue');
+            venueDiv.innerHTML = `${pub.venue} &middot; ${pub.year}`;
 
             pubDiv.appendChild(titleLink);
-            pubDiv.appendChild(details);
-            container.appendChild(pubDiv);
+            pubDiv.appendChild(authorsDiv);
+            pubDiv.appendChild(venueDiv);
+
         });
         })
         .catch(error => {
