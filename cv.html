@@ -101,23 +101,35 @@
       width: 100%;
       max-width: 700px;
       position: relative;
-      padding-left: 20px;
-      border-left: 2px solid #a94442;
+      margin: 0 auto;
+      padding-left: 40px; /* space for content */
       text-align: left;
     }
 
+    /* The vertical line */
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 16px;              /* center axis */
+      width: 1px;
+      background-color: rgba(169, 68, 66, 0.4);
+    }
+
+
     .timeline-item {
       position: relative;
-      padding-left: 30px;
       margin-bottom: 36px;
+      padding-left: 24px;
     }
 
     .timeline-dot {
       position: absolute;
-      left: -11px;
-      top: 4px;
-      width: 10px;
-      height: 10px;
+      left: 13px;              /* centers dot on the line */
+      top: 6px;
+      width: 6px;
+      height: 6px;
       background-color: #a94442;
       border-radius: 50%;
     }
