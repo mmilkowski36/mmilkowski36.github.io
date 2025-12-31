@@ -100,57 +100,56 @@
     .timeline {
       width: 100%;
       max-width: 760px;
-      position: relative;
       margin: 0 auto;
-      padding-left: 56px;   /* space for text */
+      position: relative;
+      padding-left: 72px; /* space for content only */
     }
 
-
-    /* The vertical line */
+    /* the vertical axis */
     .timeline::before {
       content: "";
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 28px;           /* true center for dots */
+      left: 32px;              /* ONE source of truth */
       width: 1px;
-      background-color: rgba(0,0,0,0.15);
+      background-color: rgba(169, 68, 66, 0.4);
     }
 
     .timeline-item {
       position: relative;
-      padding-left: 40px;
       margin-bottom: 44px;
     }
 
-
+    /* dot sits ON the line */
     .timeline-dot {
       position: absolute;
-      left: 24px;          /* aligns center of dot to line */
+      left: 28px;              /* 32px - (8px / 2) */
       top: 6px;
       width: 8px;
       height: 8px;
-      background-color: rgba(0,0,0,0.45);
+      background-color: rgba(0,0,0,0.6);
       border-radius: 50%;
     }
 
-
+    /* text block */
     .timeline-date {
       font-size: 0.85rem;
-      color: #843534;
-      margin-bottom: 4px;
+      color: rgba(0,0,0,0.45);
+      margin-bottom: 6px;
     }
 
     .timeline-title {
+      font-size: 1.05rem;
       font-weight: 600;
-      font-size: 1rem;
       margin-bottom: 4px;
     }
 
     .timeline-desc {
-      font-size: 0.9rem;
-      color: #843534;
+      font-size: 0.95rem;
+      color: rgba(0,0,0,0.6);
     }
+
 
     @media (max-width: 768px) {
       header {
