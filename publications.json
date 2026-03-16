@@ -1,5 +1,12 @@
 [
   {
+    "title": "Deception and Communication in Autonomous Multi-Agent Systems: An Experimental Study with Among Us",
+    "link": "",
+    "authors": ["Maria Milkowski", "Tim Weninger"],
+    "venue": "International Conference on Autonomous Agents and Multiagent Systems (AAMAS)",
+    "year": 2026
+  },
+  {
     "title": "Enabling User-Created Multi-Agent Simulations: Interactive and Customizable 2D Environments to Study Team Dynamics with LLM Agents ",
     "link": "https://openreview.net/forum?id=BX1BnepTZO",
     "authors": ["Mohammed Almutairi", "Charles Chiang", "Haoze Guo", "Nandini Banerjee", "Maria Milkowski", "Daniel Nguyen", "Michael G Yankoski", "Tim Weninger", "Svitlana Volkova", "Trenton W. Ford", "Diego Gomez-Zara"],
