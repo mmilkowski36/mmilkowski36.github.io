@@ -210,7 +210,7 @@
       border: 3px solid #a94442;
       object-fit: cover;
       justify-self: center;
-      transition: opacity 0.25s ease;
+      cursor: pointer;
     }
 
     .about-text h1 {
@@ -311,13 +311,24 @@
 <section class="news-section">
   <h2>News & Updates</h2>
 
-  <div class="news-item">
+    <div class="news-item">
     <div class="news-date">
-      <strong>August</strong>
-      <span>2026</span>
+      <span>Oct 2026</span>
     </div>
     <div class="news-content">
-      <h3>Started serving as CSE Class Rep!</h3>
+      <h3>Attending Michigan AI Symposium!</h3>
+      <p>
+        Will you be in Ann Arbor? Email me to meet up! 
+      </p>
+    </div>
+  </div>
+
+  <div class="news-item">
+    <div class="news-date">
+      <span>August 2026</span>
+    </div>
+    <div class="news-content">
+      <h3>Began serving as CSE Class Rep!</h3>
     </div>
   </div>
 
@@ -425,32 +436,27 @@
   const photos = [
     "images/meSquare.jpg",
     "images/playful.jpg",
-    "images/portrait.png",
   ];
 
   let currentPhoto = 0;
-  let slideshowInterval;
 
-  // Preload images so they appear smoothly
+  // Preload images
   photos.forEach(src => {
     const img = new Image();
     img.src = src;
   });
 
-  // Start slideshow when mouse enters
-  profilePhoto.addEventListener("mouseenter", () => {
-    slideshowInterval = setInterval(() => {
-      currentPhoto = (currentPhoto + 1) % photos.length;
-      profilePhoto.src = photos[currentPhoto];
-    }, 1000);
-  });
+  // Advance to the next photo
+  function nextPhoto() {
+    currentPhoto = (currentPhoto + 1) % photos.length;
+    profilePhoto.src = photos[currentPhoto];
+  }
 
-  // Return to original photo when mouse leaves
-  profilePhoto.addEventListener("mouseleave", () => {
-    clearInterval(slideshowInterval);
-    currentPhoto = 0;
-    profilePhoto.src = photos[0];
-  });
+  // Advance when hovering over the image
+  profilePhoto.addEventListener("mouseenter", nextPhoto);
+
+  // Advance when clicking or tapping the image
+  profilePhoto.addEventListener("click", nextPhoto);
 </script>
 
 
