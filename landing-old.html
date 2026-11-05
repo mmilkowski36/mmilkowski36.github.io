@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maria Milkowski</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    /* === Reset and Base Styles === */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #f2dede;
+      color: #a94442;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      width: 100%;
+      padding: 40px 20px;
+    }
+
+
+    .photo {
+      flex: 1 1 300px;
+      max-width: 400px;
+      aspect-ratio: 4 / 6;
+      border-radius: 60% / 50%;
+      overflow: hidden;
+      border: 2px solid #a94442;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info {
+      flex: 1 1 300px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    .info h1 {
+      font-family: 'IM Fell DW Pica', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .info h2 {
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .arrow {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .info a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color: #a94442;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .info a:hover {
+      color: #843534;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .info h1 {
+        font-size: 2.5rem;
+      }
+
+      .info h2 {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .photo {
+        max-width: 90%;
+      }
+
+      .info h1 {
+        font-size: 2rem;
+      }
+
+      .info h2 {
+        font-size: 0.8rem;
+      }
+
+      .info a {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="photo">
+      <!-- Replace with your image file name -->
+      <img src="images/portrait.png" alt="Maria Milkowski">
+    </div>
+    <div class="info">
+      <h1>Maria Milkowski</h1>
+      <h2>AGENTIC AI RESEARCHER</h2>
+      <div class="arrow">↓</div>
+      <a href="about.html">About me</a>
+      <a href="publications.html">See my publications</a>
+      <a href="cv.html">See my CV</a>
+      <a href="mailto:mmilkows@nd.edu">Send me an email</a>
+      <a href="socials.html">Find me on social media</a>
+    </div>
+  </div>
+</body>
+</html>
